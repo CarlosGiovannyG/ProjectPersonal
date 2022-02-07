@@ -14,14 +14,14 @@ const [openMenu, setOpenMenu] = useState(true);
   const mediaMenu = () => {
     setOpenMenu(!openMenu);
   }
-
   
   return (
     <div className={`${styles.header} ${isScrolling > 20 ? styles.headerScrolling : null}`}>
       <nav onClick={toTheTop} className={styles.nav}>
         <div className={`${styles.logo} ${isScrolling > 20 ?
           styles.logoScrolling : null}`}>Carlos Giovanny</div>
-        <button onClick={mediaMenu} arial-label={`${openMenu ? "Cerrar menu": "Abrir menu"}`} className={`${styles.btnMenu} ${isScrolling > 20 ?
+        <button onClick={mediaMenu} arial-label={`${openMenu ? "Cerrar menu" : "Abrir menu"}`}
+          className={`${styles.btnMenu} ${isScrolling > 20 ?
           styles.btnMenuScrolling : null}`}><span>&#9776;</span> </button>
         <ul className={`${styles.navMenu} ${openMenu ? styles.navMenuVisible : null}`}>
           {

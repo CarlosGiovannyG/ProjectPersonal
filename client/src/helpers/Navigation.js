@@ -4,11 +4,9 @@ import routes from './Routes'
 const links = {
 
   notLogin: [
-    {  title: 'HOME', path: routes.home },
-    // { title: 'MENU', path: routes.menu },
-     {  title: 'ABOUT', path: `${routes.home}#Navbar` },
-     {  title: 'CONTACT', path: `${routes.home}#AboutUs` },
-    {  title: 'ACCOUNT', path: routes.account },
+    { title: 'home', path: routes.home },
+    { title: 'register', path: routes.register },
+    { title: 'login', path: routes.login },
 
   ],
   isLogin: [

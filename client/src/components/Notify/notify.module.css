@@ -1,0 +1,74 @@
+/* @keyframes error {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+} */
+
+
+@keyframes error {
+  100%   {background-color:rgba(184, 180, 180, 0.63); right:1%; top:5%;}
+  0% {background-color:rgba(184, 180, 180, 0.63); right:1%; top:90%;}
+}
+
+@keyframes success {
+  100%   {background-color:rgba(184, 180, 180, 0.63); left:1%; top:0%;}
+  0% {background-color:rgba(184, 180, 180, 0.63); left:1%; top:90%;}
+}
+
+.notifyError{
+position: absolute;
+top: 4%;
+right:1%;
+min-width: max-content;
+min-height: max-content;
+display: flex;
+align-items: center;
+justify-content: start;
+ animation-name: error;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  color: red;
+  border: 1px solid red;
+  z-index: 1;
+}
+
+.message{
+  justify-content:center;
+  min-width: max-content;
+font-weight: bold;
+}
+
+.notify{
+position: absolute;
+top: 4%;
+left:1%;
+min-width: max-content;
+min-height: max-content;
+display: flex;
+align-items: center;
+justify-content: start;
+ animation-name: success;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  color: green;
+  border: 2px solid green;
+  z-index: 1;
+}
+
+.AlertError{
+   width: 40px;
+  height: 40px;
+  position: relative;
+  background-color :red;
+}
+
+.Alert{
+   width: 40px;
+  height: 40px;
+  position: relative;
+  background-color :green;
+}

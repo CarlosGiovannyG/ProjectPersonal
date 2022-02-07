@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'Pagina cargada con exito' })
 })
 
-app.use('/', require('./Routes/routes'));
+app.use('/', require('./Routes/Routes'));
 
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 

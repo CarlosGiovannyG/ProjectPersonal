@@ -1,0 +1,40 @@
+.open {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.5s ;
+  z-index: 1;
+}
+
+.close {
+  display: none;
+}
+
+.container {
+  min-width: 30%;
+  max-width: 70%;
+  min-height: 40vh;
+  max-height: 60vh;
+  position: relative;
+  overflow-y: hidden;
+  padding: 1rem;
+  background-color: #f1ece4;
+  transition: all 1.5s ;
+}
+
+.closed {
+  position: absolute;
+  top: 0.5%;
+  right: 0.5%;
+  font-size: 2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 3px;
+}
