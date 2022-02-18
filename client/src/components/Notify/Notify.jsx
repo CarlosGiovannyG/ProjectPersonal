@@ -1,26 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './notify.module.css'
 import { GrAlert, GrFormCheckmark} from 'react-icons/gr'
 import { useState } from 'react';
 
 const NotifyError = ({ success, error }) => {
   
-  const [message, setMessage] = useState(null);
-  const [messageError, setMessageError] = useState(null);
+  const [message ] = useState(success);
+  const [messageError ] = useState(error);
 
-  useEffect(() => {
-    if (success) {
-      setMessage(success);
-      setTimeout(() => setMessage(null),5000)
-    }
-  
-    if (error) {
-      setMessageError(error)
-      setTimeout(() => setMessageError(null),5000)
-    }
     
-  }, [error, success, message, messageError]);
-  
   return (
   <>
     {messageError && 

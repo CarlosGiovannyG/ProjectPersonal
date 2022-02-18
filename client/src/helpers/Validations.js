@@ -23,7 +23,12 @@ const validations = {
 
     if (!/\S+@\S+\.\S+/.test(newRecord.email)) {errors.email = '• Correo no valido.';}
 
-    if (!newRecord.email) {errors.email = '• El correo es requerido.';}
+    if (!newRecord.email) { errors.email = '• El correo es requerido.'; }
+    
+    if (!newRecord.phone) errors.phone = "Se requiere número teléfonico";
+    else if (/(?=[^0-9])/.test(newRecord.phone)) errors.phone = "Teléfono Debe ser solo números";
+  // else if (/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/.test(input.phone)) errors.phone = 'Número no valido';
+
 
     return errors;
   },

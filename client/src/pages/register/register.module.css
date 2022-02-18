@@ -1,41 +1,47 @@
 .containerRegister{
-  width: 100%;
-  height: 90vh;
-  background-color: rgba(0, 0, 0, 0.586);
-  top: 0;
-  left: 0;
+  width: 40%;
+  height: 70vh;
   display:flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s cubic;
+  margin:0 auto;
+}
+
+.containerError{
+  min-width: max-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px;
 }
 
 .register{
-  min-width:60%;
-  min-height: 70vh;
+  min-width:100%;
   background-color:white;
   border: 1px solid black;
-  padding: 1%;
+  padding: .5%;
+  border-radius: 15px;
 }
 
 .title{
     font-weight: lighter;
     color: black;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 500;
     text-align: center;
 }
 
 .containerInputs{
-  border: 2px solid black;
+  border: 1px solid black;
   width: 90%;
-  min-height: 60vh;
-  margin: 0 auto;
+  min-height: 30vh;
+  margin: 5% auto;
+  border-radius: 15px;
+
 }
 
 .InputsUno{
-  margin-top:5%;
-  height: 7vh;
+  margin-top:1%;
+  height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,19 +49,20 @@
 }
 
 .InputsDos{
-  margin-top:5%;
-  height: 7vh;
+  margin-top:1%;
+  height: 6vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1% 2%;
+  position: relative;
 }
 
 .Inputs{
   border:none;
-  width: 48%;
-  height:100%;
-padding-left: 5px;
+  width: 43%;
+  height:90%;
+padding-left: 2px;
 background-color: rgba(0, 0, 0, 0.086);
 }
 
