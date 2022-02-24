@@ -22,10 +22,11 @@ class UserController {
     const userRepository = getRepository(User);
 
     try {
-      const user = await userRepository.findOneOrFail(id);
+      const user = await userRepository.findOneOrFail(id, {
+        relations: ["links"]
+      });
       res.json(user);
     } catch (error) {
-      console.log(error);
       res.status(404).json({ messageError: "Not result" });
     }
   };

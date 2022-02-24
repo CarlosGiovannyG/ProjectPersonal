@@ -6,9 +6,11 @@ import {
   UpdateDateColumn,
   Unique,
   IsNull,
+  OneToMany,
 } from "typeorm";
 import { MinLength, IsNotEmpty, IsEmail, IsOptional } from "class-validator";
 import * as bcrypt from "bcryptjs";
+import Link from "./links";
 
 @Entity()
 @Unique(["username"])
@@ -19,16 +21,16 @@ class User {
   @Column()
   @MinLength(6)
   @IsEmail()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "Username is Required" })
   username: string;
 
   @Column()
   @MinLength(6)
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "password is Required" })
   password: string;
 
   @Column()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: "Role is Required" })
   role: string;
 
   @Column({ nullable: true })
@@ -57,6 +59,9 @@ class User {
   checkPassword(password: string): boolean {
     return bcrypt.compareSync(password, this.password);
   }
+
+  @OneToMany(() => Link, (link) => link.user)
+  links: Link[];
 }
 
 export default User;
