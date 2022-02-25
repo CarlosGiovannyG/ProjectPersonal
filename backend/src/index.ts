@@ -26,7 +26,7 @@ createConnection()
 
     // Routes
     app.use("/", routes);
-
+    
     // Starting the server
     app.listen(app.get("port"), () => {
       console.log(

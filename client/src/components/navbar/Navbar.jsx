@@ -34,7 +34,7 @@ const [openMenu, setOpenMenu] = useState(true);
                   styles.navLink}>
                 <div>
                   <li className={`${styles.navMenuItem} ${isScrolling > 20 ?
-                    styles.navMenuItemScrolling : null}`} >
+                    styles.navMenuItemScrolling : null}`} onClick={mediaMenu} >
                     {l.title}
                   </li>
                 </div>

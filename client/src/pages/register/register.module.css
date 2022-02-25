@@ -10,15 +10,15 @@
 .containerError{
   min-width: max-content;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2px;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 
 .register{
   min-width:100%;
   background-color:white;
   border: 1px solid black;
-  padding: .5%;
+  padding: 1.5%;
   border-radius: 15px;
 }
 
@@ -68,8 +68,55 @@ background-color: rgba(0, 0, 0, 0.086);
 
 .errors{
    border:none;
-  width: 48%;
-  height:100%;
+  width: 100%;
+  height:max-content;
 padding-left: 5px;
 background-color: rgba(160, 16, 16, 0.753);
+}
+
+@media (max-width: 768px) {
+  .containerRegister{
+  width: 90%;
+  height: 60vh;
+  margin:0 auto;
+}
+
+.containerError{
+  grid-template-columns: 1fr;
+  grid-gap: 1px;
+  font-size: 10px;
+}
+
+.register{
+  border: 1px solid rgb(134, 133, 133);
+  padding: 1.5%;
+  border-radius: 12px;
+}
+
+.containerInputs{
+   border: 1px solid rgb(134, 133, 133);
+  width: 95%;
+  min-height: max-content;
+  margin: 5% auto;
+  border-radius: 10px;
+
+}
+
+.InputsUno{
+  height: 5vh;
+}
+
+.InputsDos{
+  height: 5vh;
+}
+
+.Inputs{
+  width: 48%;
+  height:90%;
+}
+
+.errors{
+  width: 100%;
+  height:max-content;
+}
 }

@@ -32,7 +32,6 @@ const Register = () => {
             {errors.email && <Notify error={errors.email} />}
             {errors.password && <Notify error={errors.password} />}
             {errors.passwordConfirm && <Notify error={errors.passwordConfirm} />}
-            {errors.phone && <Notify error={errors.phone} />}        
      </div>      
         <div className={styles.title}> Registro</div>
         <div className={styles.containerInputs}>
@@ -67,24 +66,6 @@ const Register = () => {
           <div className={styles.InputsDos}>
             <input
               className={styles.Inputs}
-              type="email"
-              name='email'
-              placeholder="Correo electronico"
-              value={newRecord.email}
-              onChange={handleChange}
-            />
-            <input
-              className={styles.Inputs}
-              type="text"
-              name='phone'
-              placeholder="Telefono"
-              value={newRecord.phone}
-              onChange={handleChange}
-            />
-          </div>
-          <div className={styles.InputsDos}>
-            <input
-              className={styles.Inputs}
               type="password"
               name='password'
               placeholder="Elija una contraseña"
@@ -100,15 +81,25 @@ const Register = () => {
               onChange={handleChange}
             />
           </div>
-          <div className={styles.InputsUno}>
+          <div className={styles.InputsDos}>
             <input
               className={styles.Inputs}
-              type="submit"
-              name='passwordConfirm'
-              placeholder="Confirme la contraseña"
-              value="REGISTRARSE"
+              type="email"
+              name='email'
+              placeholder="Correo electronico"
+              value={newRecord.email}
               onChange={handleChange}
             />
+            {!errors.username && !errors.name && !errors.last_name && !errors.email && !errors.password && !errors.passwordConfirm  &&
+                <input
+                  className={styles.Inputs}
+                  type="submit"
+                  name='passwordConfirm'
+                  placeholder="Confirme la contraseña"
+                  value="REGISTRARSE"
+                  onChange={handleChange}
+                />
+            }
           </div>
         </div>
       </form>
